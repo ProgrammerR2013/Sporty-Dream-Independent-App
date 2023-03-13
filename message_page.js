@@ -54,7 +54,7 @@ function updateLike(message_id){
     console.log("Clicked on like button" + message_id);
     button_id = message_id;
     likes = document.getElementById(button_id).value;
-    updated_likes = Number(likes + 1);
+    updated_likes = Number(likes) + 1;
 
     // Add the updated likes number to firebase realtime database
     firebase.database().ref(room_name).child(message_id).update({
